@@ -15,13 +15,21 @@ body{
     flex-wrap: wrap;
 }
 
-
+#top-nav{
+    height: 70%;
+}
+.bottom-nav{
+    max-height: 110px;
+    color: white;
+    display: block;
+}
 nav{
     background-color: black;
     height: calc(100vh - var(--player-bar-height));
     width: 200px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 main{
@@ -41,7 +49,9 @@ footer{
     padding: 1rem;
     padding-right: 3rem;
 }
-
+#menu {
+    margin-bottom: 1em;
+}
 #menu a{
     text-decoration: none;
     color: white;
@@ -51,6 +61,7 @@ footer{
     padding-left: 1rem;
     display: inline-block;
     vertical-align: top;
+
 
 }
 
@@ -65,16 +76,75 @@ footer{
 }
 
 
-#addplay{
+/* #addplay{
     height: 40px;
     width: 40px;
     background-color: rgb(255, 255, 255, 0.5);
     padding: 10PX;
     text-align: CENTER;
+    margin: 1em 0;
+    color: black;
+    
+} */
+
+.add-playlist{
+
+    padding-left: 1em;
+    margin-top: 1em;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+.add-playlist i{
+    font-size: 3em;
+    color: white;
+    margin-right: 1rem;
+}
+.add-playlist span{
+
+    color: white;
+
 }
 
-#addplay h3{
-    
-    height: 100%;
-    color: black;
+
+h3{
+    color: white;
+    padding-left: 1em;
 }
+
+
+
+#playlists{
+
+    overflow: auto;
+    width: 100%;
+    padding-left: 1em;
+}
+
+#playlists ul {
+    display: inline-block;
+    overflow: hidden;
+    list-style-type: none;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 200%;
+
+
+}
+
+.bottom-nav h3{
+    padding-left: 0;
+}
+.bottom-nav hr{
+    margin-top: 0.5rem;
+} 
+.bottom-nav img{
+
+    max-width: 1.5em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: lightgray;
+    margin-right: 0.5rem;
+
+}
+
+
+/****** main *******/
