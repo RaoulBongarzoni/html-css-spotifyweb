@@ -16,6 +16,9 @@ body{
     justify-content: space-evenly;
 }
 
+.darkgraycolor{
+    color: darkgray;
+}
 .top-nav{
     height: 40%;
 }
@@ -24,6 +27,8 @@ body{
     color: white;
     display: block;
 }
+
+
 nav{
     background-color: black;
     height: calc(100vh - var(--player-bar-height));
@@ -54,21 +59,35 @@ footer{
 #menu {
     margin-bottom: 1em;
 }
-#menu a{
-    text-decoration: none;
-    color: white;
-    width: 100%;
-
-/*     margin: 0.5rem 0; */
+#menu li{
+    height: 1.5rem;
     padding-left: 1rem;
+    
+
+}
+#menu a{
+
+    font-size: small;
+    font-weight: 600;
+    text-decoration: none;
+    color: darkgray;
+    width: 100%;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: baseline;
+}
+
+#menu p{
+    height: 0.5rem;
     display: inline-block;
-    vertical-align: top;
 
-
+    margin-top: -32px;
+    
 }
 
 #menu img{
     height: 1.5rem; 
+    display: inline-block;
 }
 
 #playlists{
@@ -133,24 +152,37 @@ h3{
 
 }
 
-.bottom-nav h3{
-    padding-left: 0;
-}
-.bottom-nav hr{
-    margin-top: 0.5rem;
-} 
+
 .bottom-nav img{
 
     max-width: 1.5em;
     border-radius: 50%;
     aspect-ratio: 1;
-    background-color: lightgray;
+    background-color: darkgray;
     margin-right: 0.5rem;
 
 }
 
 
 /****** main *******/
+
+#strip{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+#strip .btn{
+    margin-right: 1em;
+    padding: 1rem 2rem;
+    border: 1px solid white;
+    color: white;
+
+    border-radius: 50px;
+}
 
 /* BARRA NAVIGAZIONE CENTRALE */
 
@@ -165,9 +197,10 @@ h3{
     
 }
 #navigation-options li a{
-
+    
+    font-weight: 600;
     text-decoration: none;
-    color: beige;
+    color: #64676D;
     
     
 }
@@ -176,15 +209,19 @@ h3{
 /* riga */
 
 .row .title h2{
+
     color: white;
-    margin: 3em 0;
-    font-size: medium;
-    
+    font-size: xx-large;
+}
+.row .title p{
+
+    color: slategrey;
+    font-size: x-small;
 }
 .row{
     width: 100%;
     margin: 5rem auto 2rem ;
-    padding: 0 1.5rem;
+    padding-left: 2em;
 
 }
 
@@ -192,7 +229,7 @@ h3{
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 
@@ -202,7 +239,8 @@ h3{
 /* singola carta */
 
 .card{
-    width: calc(100% / 6 - 1rem);
+    max-width: calc(100% / 6 - 1rem);
+    margin-right: 1.5rem;
     color: white;
     text-align: center;
 }
@@ -214,11 +252,12 @@ h3{
 
 .card span{
     font-size: small;
-    color: rgba(255, 255, 255, 0.5);
+    color: #64676d;
 }
 
-.card div img{
+.card img{
     width: 100%;
+
 }
 
 .artist div img{
@@ -273,7 +312,7 @@ footer>div{
 
 }
 #player-text span{
-    color: darkgray;
+    color: #64676d;
     font-size: small;
 }
 .player-icons i{
