@@ -69,7 +69,7 @@
         </nav>
 
 
-
+<!-- -------------main------------------ -->
 
         <main class="bg-main">
 
@@ -78,7 +78,17 @@
             <div id="premium">
                 <div class="btn">Effettua L'Upgrade</div>
             </div>
+            <section id="navigation-options">
+                <ul>
+                    <li><a href="#">EVIDENZA</a></li>
+                    <li><a href="#">PODCAST</a></li>
+                    <li><a href="#">CLASSIFICHE</a></li>
+                    <li><a href="#">GENERI E MOOD</a></li>
+                    <li><a href="#">NUOVE USCITE</a></li>
+                    <li><a href="#">SCOPRI</a></li>
+                </ul>
 
+            </section>
             <!-- singola riga -->
             <section class="row">
                 <div class="title">
@@ -245,9 +255,10 @@
 
         </main>
 
-
+<!-- -----------PLAY BAR--------------- -->
         <footer>
             <div class="d-flex flex-justify-between w-100">
+                <!-- LEFT -->
                 <div class="play " id="left">
                     <img src="img/player_left.jpg" class="w-20"alt="player left">
                     <div id="player-text">
@@ -262,10 +273,44 @@
                     </div>
 
                 </div>
+
+                <!-- CENTER -->
                 <div class="play " id="center">
-                    a
+                    <!-- ICONE -->
+
+                    <div id="progressbar-top">
+                        <i class="fas fa-shuffle"></i>
+                        <i class="fas fa-backward-step"></i>
+                        <i class="far fa-circle-play fa-xl"></i>
+                        <i class="fas fa-forward-step"></i>
+                        <i class="fas fa-arrow-rotate-right"></i>
+                    </div>
+                    <div id="progressbar-bottom">
+                        <span>0:25</span>
+
+                        <div class="progressbar w-80">
+                            <div class="progressbar-actual w-40">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+
+
+                        <span>0:25</span>
+
+                    </div>
                 </div>
-                <div class="play " id="right">a</div>
+
+                <!-- RIGHT -->
+                <div class="play " id="right">
+                    <i class="fas fa-list"></i>
+                    <i class="fas fa-display"></i>
+                    <i class="fas fa-volume-high"></i>
+                    <div class="progressbar w-40">
+                        <div class="progressbar-actual w-30">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
