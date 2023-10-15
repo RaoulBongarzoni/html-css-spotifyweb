@@ -9,6 +9,11 @@
 body{
     font-family: sans-serif;
 }
+ul{
+    list-style-type: none;
+}
+
+
 
 #wrapper{
     height: 100vh;
@@ -50,12 +55,15 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 1.5rem 0 1.5rem;
+/*     padding: 0 1.5rem 0 1.5rem; */
     height: 100%;
     width: 100%;
 }
 
 
+.padding-16{
+    padding: 0 16px
+}
 /* parte superiore */
 
 .top-nav{
@@ -152,8 +160,9 @@ footer{
 .bottom-nav p{
     display: inline-block;
 }
+
 .bottom-nav img{
-    min-width: 1.5rem;
+    max-width: 1.5rem;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: darkgray;
@@ -189,7 +198,7 @@ footer{
 
 #navigation-options ul{
     text-align: center;
-    color: beige;
+
 }
 #navigation-options li{
     display: inline-block;
@@ -198,8 +207,8 @@ footer{
     
 }
 #navigation-options li a{
-    
-    font-weight: 600;
+    font-size: small;
+    font-weight: 800;
     text-decoration: none;
     color: #64676D;
     
@@ -209,10 +218,11 @@ footer{
 
 /* riga */
 
-.row .title h2{
+.row .title h3{
 
     color: white;
-    font-size: xx-large;
+    font-weight: bold;
+    font-size: x-large;
 }
 .row .title p{
 
@@ -292,20 +302,7 @@ footer>div{
 }
 
 
-
-
-#left{
-
-    width: 230px;
-    justify-content: space-around;
-}
-#center{
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 40%;
-
-}
-
+/* formattazione testo e icone */
 #player-text{
     margin: 0.3rem;
 }
@@ -313,6 +310,7 @@ footer>div{
     color: white;
 
 }
+
 #player-text span{
     color: #64676d;
     font-size: small;
@@ -322,8 +320,24 @@ footer>div{
 }
 
 
+#progressbar-bottom span{
+    font-size: x-small;
+    font-weight: bold;
+}
 
-/* ----------CENTRO------------ */
+
+
+/* left */
+#left{
+
+    width: 230px;
+    justify-content: space-around;
+}
+
+
+
+
+/* ----------CENTER------------ */
 
 #center{
     flex-direction: column;
@@ -336,7 +350,7 @@ footer>div{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 40%;
+    width: 80%;
     padding: 1em;
 
 }
@@ -350,7 +364,7 @@ footer>div{
 
 }
 
-
+/* barra con cerchio */
 .progressbar{
     display: inline-block;
 
@@ -370,16 +384,15 @@ footer>div{
 
 }
 
-
 .circle{
     position: absolute;
     top: -130%;
-    right: 0;
+    right: -6%;
     border-radius: 50%;
     background-color: slateblue;
     height: 0.7em;
     width: 0.7em;
-    
+    display: none;
 
 }
 
@@ -393,9 +406,36 @@ footer>div{
 
 
 
+/* ##################### HOVER E ANIMAZIONI      ###########  */
+.btn:hover{
+    text-shadow: 0 0 4px #FFF;
+    box-shadow: 0 0 3px #FA3, inset 0 0 4px 1px #FFF;
+}
+
+.logo>a>img:hover {
+    border: 1px solid white;
+    border-radius: 13px;
+    padding: 0.5rem;
+}
+
+.menu-item:hover {
+    border-left: 2px solid greenyellow;
+}
+
+#navigation-options li:hover{
+
+    margin: calc(1rem - 2px) 0.5rem;
+    border-bottom: 2px solid greenyellow;
+}
 
 
 
+.play div:hover .circle{
+    display: block;
+}
+#progressbar-bottom:hover .circle{
+    display: block;
+}
 
 
 
@@ -403,8 +443,38 @@ footer>div{
 
 /* ############## MEDIA QUERY ############ */
 
+@media screen and (max-width:768px) and (min-width: 576px) {
 
-@media screen and (max-width:576px) {
+    .flexrow{
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: calc(100% / 4 - 1.5rem);
+        margin-bottom: 1rem;
+    }
+    main {
+        width: calc(100% - 230px);
+    }
+
+
+}
+@media screen and (max-width:576px) and (min-width:480px) {
+
+    .flexrow{
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: calc(100% / 2 - 1.5rem);
+        margin-bottom: 1rem;
+    }
+    main {
+        width: calc(100% - 230px);
+    }
+
+
+}
+
+@media screen and (max-width:480px) {
 
     /* MODIFICHE AL MAIN */
     .flexrow{
@@ -419,6 +489,11 @@ footer>div{
     }
 
     /* collasso della barra di navigazione */
+
+    .padding-16{
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .logo{
         padding: 0.4rem;
@@ -442,6 +517,7 @@ footer>div{
 
     .bottom-nav img{
         margin-right: 0;
+        width: 1.5rem;
     }
     .menu-item{
         justify-content: center;
@@ -469,8 +545,16 @@ footer>div{
     }
 
 
+    #right, #left{
+        width: 30%;
+    }
+
     
 
 
 
 }
+
+
+
+
