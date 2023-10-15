@@ -5,9 +5,11 @@
 :root{
     --player-bar-height: 100px;
 }
+
 body{
     font-family: sans-serif;
 }
+
 #wrapper{
     height: 100vh;
     width: 100%;
@@ -15,27 +17,15 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
+/* colori */
 .darkgraycolor{
     color: darkgray;
 }
-.top-nav{
-    height: 40%;
-}
-.bottom-nav{
-    max-height: 20%;
-    color: white;
-    display: block;
-}
-
 
 nav{
     background-color: black;
     height: calc(100vh - var(--player-bar-height));
     width: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 main{
@@ -52,119 +42,130 @@ footer{
     width: 100%;
 }
 
-#logo{
-    padding: 1rem;
-    padding-right: 3rem;
-}
-#menu {
-    margin-bottom: 1em;
-}
-#menu li{
-    height: 1.5rem;
-    padding-left: 1rem;
-    
 
-}
-#menu a{
+/* *****NAVIGATION BAR LATERALE*** */
 
-    font-size: small;
-    font-weight: 600;
-    text-decoration: none;
-    color: darkgray;
-    width: 100%;
-    line-height: 1.5rem;
+#nav-wrapper{
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1.5rem 0 1.5rem;
+    height: 100%;
+    width: 100%;
 }
 
-#menu p{
-    height: 0.5rem;
-    display: inline-block;
 
-    margin-top: -32px;
-    
+/* parte superiore */
+
+.top-nav{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+
 }
 
-#menu img{
-    height: 1.5rem; 
-    display: inline-block;
+/* logo */
+.logo{
+    padding: 1.5rem 2rem 0 0;
+    max-height: 10%;
+    margin-bottom: 1.5rem;
 }
 
-#playlists{
-    margin-top: 1rem;
+.logo-small{
+    display: none;
+}
+
+
+
+/* menu */
+
+.menu-item{
+    width: 100%;
+    height: 2rem;
     color: white;
-    padding-left: 1em;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+
+    
+
+}
+
+.menu-item img{
+    height: 100%;
+}
+.menu-item span{
+    padding: 0.5rem;
+    font-weight: bold;
+
 }
 
 
-/* #addplay{
-    height: 40px;
-    width: 40px;
-    background-color: rgb(255, 255, 255, 0.5);
-    padding: 10PX;
-    text-align: CENTER;
-    margin: 1em 0;
-    color: black;
-    
-} */
+/* aggiunta playlist */
+
+
 
 .add-playlist{
 
-    padding-left: 1em;
-    margin-top: 1em;
-    color: rgba(255, 255, 255, 0.5);
-
+    color: white;
+    margin-bottom: 1rem;
+}
+.add-playlist h4{
+    margin-bottom: 1em;
 }
 .add-playlist i{
     font-size: 3em;
-    color: white;
     margin-right: 1rem;
 }
-.add-playlist span{
-
-    color: white;
-
-}
 
 
-h3{
-    color: white;
-    padding-left: 1em;
-}
 
+
+/* playlists */
 
 
 #playlists{
     display: flex;
     flex-direction: column;
-    height:40%;
+    height: 40%;
     width: 100%;
-    padding-left: 1em;
+    overflow-y: scroll;
 }
 
 #playlists ul {
-    display: inline-block;
-    overflow-y: auto;
+
     list-style-type: none;
     color: rgba(255, 255, 255, 0.5);
-    line-height: 200%;
+    line-height: 150%;
 
 
 }
 
 
+/* Navigatore Bottom */
+.bottom-nav{
+    height: 20%;
+    color: white;
+    width: 100%;
+}
+.bottom-nav p{
+    display: inline-block;
+}
 .bottom-nav img{
-
-    max-width: 1.5em;
+    min-width: 1.5rem;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: darkgray;
     margin-right: 0.5rem;
-
 }
 
 
-/****** main *******/
+
+
+
+
+/****** MAIN *******/
 
 #strip{
     width: 100%;
@@ -193,7 +194,7 @@ h3{
 #navigation-options li{
     display: inline-block;
     text-decoration: none;
-    margin: 1em;
+    margin:  1rem 0.5rem;
     
 }
 #navigation-options li a{
@@ -251,6 +252,7 @@ h3{
 }
 
 .card span{
+
     font-size: small;
     color: #64676d;
 }
@@ -387,4 +389,88 @@ footer>div{
     display: flex;
     justify-content: space-evenly;
     width: 230px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ############## MEDIA QUERY ############ */
+
+
+@media screen and (max-width:576px) {
+
+    /* MODIFICHE AL MAIN */
+    .flexrow{
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: calc(100% / 2 - 1.5rem);
+        margin-bottom: 1rem;
+    }
+    main {
+        width: calc(100% - 42px);
+    }
+
+    /* collasso della barra di navigazione */
+
+    .logo{
+        padding: 0.4rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .logo-original{
+        display: none;
+    }
+    .logo-small{
+        display: inline-block;
+    }
+
+    nav{
+        width: 42px;
+    }
+    #nav-wrapper{
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .bottom-nav img{
+        margin-right: 0;
+    }
+    .menu-item{
+        justify-content: center;
+    }
+
+    .bottom-nav .avatar{
+        justify-content: center;
+    }
+    .bottom-nav span{
+        display: block;
+        text-align: center;
+        
+    }
+    .menu-item span{
+        display: none;
+        
+    }
+    .add-playlist,
+    #playlists{
+        display: none;
+    }
+
+    .bottom-nav p,hr,h3{
+        display: none;
+    }
+
+
+    
+
+
+
 }

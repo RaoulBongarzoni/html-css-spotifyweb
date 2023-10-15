@@ -13,71 +13,104 @@
 </head>
 
 <body>
+
+
+    
     <div id="wrapper">
+        
+        
+        <!-- BARRA DI NAVIGAZIONE -->
         <nav>
-            <div class="top-nav">
+            <div id="nav-wrapper">
 
-                <div id="logo">
-                    <a href="#"><img src="img/logo.svg" alt="spotify"></a>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="img/home.svg" alt=""> 
-                                <p>
-                                    Home
-                                </p>
-                            </a>
-                        </li>
-                        <li><a href="#"><img src="img/search.svg" alt=""> Cerca</a></li>
-                        <li><a href="#"><img src="img/libreria.svg" alt=""> La tua libreria</a></li>
-                    </ul>
-                </div>
-                <h3>PLAYLIST</h3>
-                <div class="add-playlist d-flex flex-align-center darkgraycolor">
-                    <div class=""><i class="fas fa-plus-square"></i></div>
-                    <span class="">Lorem ipsum</span>
-                </div>
+                <!-- PARTE SUPERIORE -->
+                
+                <div class="top-nav">
 
-                <div id="playlists">
-                    <ul>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-
-                    </ul>
-
-
-                </div>
-            </div>
-<!-- ***********install app e avatar ******* -->
-            <div class="bottom-nav">
-                <div class="d-flex flex-column bg-black">
-
-                    <div class="px-16 mb-8 darkgraycolor">
-
-                        <span><i class="far fa-arrow-alt-circle-down"></i> installa app</span>
-                        <hr class="mt-16 ">
+                <!-- logo -->
+                    <div class="logo logo-original">
+                        <a href="#"><img src="img/logo.svg" alt="spotify" ></a>
                     </div>
-                    <div class="d-flex flex-align-center px-16 mt-16 mb-8">
-                        <img src="img/profile.svg" alt="">
-                        <h3 class="">John Doe</h3>
+                    <div class="logo logo-small">
+                        <a href="#"><img src="img/logo-small.svg" alt="spotify" ></a>
+                    </div>
+
+
+
+                <!--Menu  -->
+                    <div id="menu" class="mb-16">
+                        <ul>
+                            <li>
+                                <a href="#"class="menu-item">
+                                    <img src="img/home.svg" alt="home">
+                                    <span> Home </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"class="menu-item">
+                                    <img src="img/search.svg" alt="home">
+                                    <span> Cerca </span>
+                                </a>
+                            </li>                            <li>
+                                <a href="#"class="menu-item">
+                                    <img src="img/libreria.svg" alt="home">
+                                    <span> Libreria </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                <!-- aggiunta playlist -->    
+                    <div class="add-playlist">
+                        
+                        <h4>PLAYLIST</h4>
+                        <div class="d-flex flex-align-center darkgraycolor">
+                            <div><i class="fas fa-plus-square"></i></div>
+                            <span >Lorem ipsum</span>
+                        </div>
+                    </div>
+    
+                    <div id="playlists">
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+    
+                        </ul>
+    
+    
                     </div>
                 </div>
-
+                <!-- PARTE INFERIORE-->
+                <div class="bottom-nav d-flex flex-column flex-justify-end bg-black">
+                    <div class="">
+    
+                        <div class="darkgraycolor">
+    
+                            <span>
+                                <i class="far fa-arrow-alt-circle-down"></i> <p>installa app</p>
+                            </span>
+                            <hr class="mt-16 ">
+                        </div>
+                        <div class="d-flex flex-align-center my-16 avatar">
+                            <img src="img/profile.svg" alt="">
+                            <h3 class="">John Doe</h3>
+                        </div>
+                    </div>
+    
+                </div>
             </div>
 
         </nav>
 
 
-<!-- -------------main------------------ -->
+        <!-- -------------main------------------ -->
 
         <main class="bg-main">
 
@@ -103,7 +136,7 @@
             </section>
 
 
-    <!-- *******    PRIMA RIGA    *********** -->
+            <!-- *******    PRIMA RIGA    *********** -->
 
 
             <section class="row">
@@ -134,8 +167,8 @@
                         <h4>titotolo playlist</h4>
                         <span>artista</span>
                     </div>
-                    <!-- /carta --> 
-                    
+                    <!-- /carta -->
+
                     <!-- singola carta -->
                     <div class="card"><!-- deve essere quadrato -->
                         <div><img src="img/split.jpeg" alt=""></div>
@@ -170,7 +203,7 @@
 
 
 
-    <!-- *******    SECONDA RIGA    *********** -->
+            <!-- *******    SECONDA RIGA    *********** -->
 
 
             <section class="row ">
@@ -207,7 +240,7 @@
 
 
 
-    <!-- *******    TERZA RIGA    *********** -->
+            <!-- *******    TERZA RIGA    *********** -->
 
 
 
@@ -243,12 +276,12 @@
 
         </main>
 
-<!-- -----------PLAY BAR--------------- -->
+        <!-- -----------PLAY BAR--------------- -->
         <footer>
             <div class="d-flex flex-justify-between w-100">
                 <!-- LEFT -->
                 <div class="play " id="left">
-                    <img src="img/player_left.jpg" class="w-20"alt="player left">
+                    <img src="img/player_left.jpg" class="w-20" alt="player left">
                     <div id="player-text">
                         <h5>Playing</h5>
                         <span>Brano Nome</span>
