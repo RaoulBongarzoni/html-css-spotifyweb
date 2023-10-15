@@ -138,14 +138,15 @@ footer{
     flex-direction: column;
     height: 40%;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 #playlists ul {
 
     list-style-type: none;
     color: rgba(255, 255, 255, 0.5);
-    line-height: 150%;
+    line-height: 200%;
+    overflow-y: auto;
 
 
 }
@@ -268,9 +269,41 @@ footer{
 }
 
 .card img{
+    display: block;
     width: 100%;
 
 }
+
+.mask{
+    position: relative;
+    width: 100%;
+    display: block;
+    
+
+}
+.hover-mask{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.circle-mask{
+    border-radius: 50%;
+}
+
+
+.hover-mask i{
+    font-size: x-large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
 
 .artist div img{
     border-radius: 50%;
@@ -419,13 +452,23 @@ footer>div{
 }
 
 .menu-item:hover {
+    
     border-left: 2px solid greenyellow;
 }
 
-#navigation-options li:hover{
+#navigation-options li{
+    display: inline-block;
+    position: relative
+}
+#navigation-options li:hover ::after{
 
-    margin: calc(1rem - 2px) 0.5rem;
-    border-bottom: 2px solid greenyellow;
+    content: "";
+    background: greenyellow;
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+    height: 3px;
+    width: 50%;
 }
 
 
@@ -438,7 +481,9 @@ footer>div{
 }
 
 
-
+.mask:hover .hover-mask{
+    display: block;
+}
 
 
 /* ############## MEDIA QUERY ############ */
